@@ -1,6 +1,6 @@
 import requests
 
-def call_chatgpt_server(messages, model="gpt-4o", server_url="http://server_ip:8000/chat"):
+def call_chatgpt_server(messages, model="gpt-4o", server_url="http://localhost:8000/chat"):
     """
     Send a request to the ChatGPT gateway server and return the assistant's response.
     
@@ -32,11 +32,11 @@ def call_chatgpt_server(messages, model="gpt-4o", server_url="http://server_ip:8
 if __name__ == "__main__":
     # Sample user message
     messages = [
-        {"role": "user", "content": "Write a haiku about recursion in programming."}
+        {"role": "user", "content": "How are you?"}
     ]
     try:
         # Replace 'server_ip' with the actual server IP or domain
         response = call_chatgpt_server(messages, server_url="http://localhost:8000/chat")
-        print(response["content"])  # Print the assistant's response
+        print(response["content"]) 
     except Exception as e:
         print(f"Client error: {e}")
