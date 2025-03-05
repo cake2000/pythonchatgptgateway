@@ -1,20 +1,6 @@
 import requests
 
 def call_chatgpt_server(messages, model="gpt-4o", server_url="http://localhost:8000/chat"):
-    """
-    Send a request to the ChatGPT gateway server and return the assistant's response.
-    
-    Args:
-        messages (list): List of dictionaries with 'role' and 'content' (e.g., 'user', 'assistant').
-        model (str): The OpenAI model to use (default: "gpt-4o").
-        server_url (str): URL of the server endpoint.
-    
-    Returns:
-        dict: Response containing 'role' and 'content'.
-    
-    Raises:
-        Exception: If the server returns an error.
-    """
     headers = {
         "Content-Type": "application/json"
     }
